@@ -359,7 +359,7 @@ switch (_hitArea) do {
     };
     case "era": {
         TRACE_2("hit era",_warheadType,_warheadTypeStr);
-        if (_warheadType isEqualTo WARHEAD_TYPE_HEAT || { _warheadType isEqualTo WARHEAD_TYPE_TANDEM } || { 0.05 > random 1 }) then {
+        if (_warheadType isEqualTo WARHEAD_TYPE_HEAT || { _warheadType isEqualTo WARHEAD_TYPE_AP } || { _warheadType isEqualTo WARHEAD_TYPE_TANDEM } || { 0.05 > random 1 }) then {
             private _currentDamage = _vehicle getHitIndex _hitIndex;
             TRACE_3("damaged era",_warheadType,_warheadTypeStr,_currentDamage);
             [_vehicle, _hitIndex, _hitpointName, 1] call FUNC(addDamage);
